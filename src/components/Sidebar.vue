@@ -1,0 +1,16 @@
+<template>
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">P</div><span>PromptPilot</span></div>
+    <nav>
+      <button class="nav-item"><Icon name="task"/>任务管理</button>
+      <div class="nav-group"><p>Prompt</p><button class="nav-item active"><Icon name="prompt"/>Prompt 生成</button><button class="nav-item"><Icon name="debug"/>Prompt 调试 <b>⌄</b></button><button class="nav-item"><Icon name="batch"/>Prompt 批量 <b>⌄</b></button></div>
+      <div class="nav-group"><p>Solution</p><button class="nav-item"><Icon name="image"/>视觉理解 Solution <em>Beta</em></button><button class="nav-item"><span class="play">▶</span> 视频理解 Solution</button></div>
+    </nav>
+    <div class="side-bottom"><button class="knowledge"><Icon name="book"/>知识库</button><button class="credits"><span class="coin">P</span><span><small>免费积分</small><strong>0</strong></span></button><div class="login"><div class="avatar">用</div><div><strong>登录/注册</strong><small>登录解锁全部限免功能</small></div></div></div>
+  </aside>
+</template>
+<script>import Icon from './Icon.vue'; export default { components: { Icon } }</script>
+<style scoped>
+.sidebar{width:224px;height:100vh;position:fixed;left:0;top:0;background:#fff;border-right:1px solid #edf0f5;display:flex;flex-direction:column;z-index:4}.brand{height:72px;padding:0 24px;display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;color:#1d2b4f}.brand-mark{width:28px;height:28px;border-radius:8px 14px 8px 14px;background:linear-gradient(135deg,#5d5df8,#31a7ff);color:white;text-align:center;font-style:italic;font-weight:800;line-height:28px;transform:rotate(-7deg)}nav{padding:6px 12px;flex:1}.nav-item{width:100%;height:42px;border:0;background:none;border-radius:8px;display:flex;align-items:center;gap:11px;padding:0 13px;color:#4d5568;font-size:14px;text-align:left}.nav-item.active{background:#eef0ff;color:#5459d9}.nav-item b{margin-left:auto;font-weight:400}.nav-group p{font-size:12px;color:#adb2bf;margin:18px 12px 8px}.nav-item em{font-size:10px;color:#6c69e9;background:#f0efff;border-radius:4px;padding:2px 5px;font-style:normal}.play{width:18px;text-align:center;color:#7479e8}.side-bottom{border-top:1px solid #f0f1f5;padding-top:10px}.knowledge,.credits,.login{width:100%;border:0;background:white;display:flex;align-items:center;text-align:left}.knowledge{height:42px;padding:0 24px;gap:12px;color:#555c70}.credits{height:58px;padding:0 24px;gap:12px;color:#747b8e;border-bottom:1px solid #f1f2f5}.coin{width:28px;height:28px;background:#fff1c6;color:#dcac34;border-radius:50%;display:grid;place-items:center;font-weight:bold}.credits small,.login small{display:block;color:#9ca0ad;font-size:11px}.credits strong{font-size:15px;color:#454b60}.login{padding:13px 24px;gap:10px}.login strong{font-size:13px}.avatar{width:30px;height:30px;border-radius:50%;background:#edf0ff;color:#6267db;display:grid;place-items:center;font-size:12px}
+@media(max-width:760px){.sidebar{width:64px}.brand{padding:0 18px}.brand span,.nav-item:not(.active){font-size:0}.brand span,.nav-group p,.nav-item b,.nav-item em,.knowledge,.side-bottom span:not(.coin),.login div:last-child{display:none}.nav-item{justify-content:center;padding:0}.knowledge{width:64px}.credits{padding:0 18px}.login{padding:13px 17px}}
+</style>
